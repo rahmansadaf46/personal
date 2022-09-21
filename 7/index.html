@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function validateForm() {
+            let name = document.forms["myForm"]["name"].value;
+            let email = document.forms["myForm"]["email"].value;
+            let mobile = document.forms["myForm"]["mobile"].value;
+            if (name == "") {
+                alert("Name must be filled out.");
+                return false;
+            }
+            else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email) === false) {
+                alert("Email is not valid.");
+                return false;
+            }
+            else if (mobile.length < 11) {
+                alert("Mobile number should be 11 digits.");
+                return false;
+            }
+            else{
+                alert("Data Submitted");
+            }
+        }
+    </script>
+</head>
+<body >
+    <div >
+        <div style="display: flex;justify-content:center;">
+            <div style="border: 5px solid black; background-color:white;padding:10px 30px; border-radius: 30px;">   
+                <h2 style="text-align: center;">Student Information</h2>   
+                <form name="myForm" onsubmit="return validateForm()" >
+                    Name: <input type="text" name="name"><br><br>
+                    Address: <textarea type="text" name="address"></textarea><br><br>
+                    <p>Please select gender:</p>
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label><br>
+                    <input type="radio" id="other" name="gender" value="Other">
+                    <label for="other">Other</label><br><br>
+                    Email: <input type="text" name="email"><br><br>
+                    Mobile Number: <input type="number" name="mobile"><br><br>
+                    <br>
+                    <div style="text-align:center">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

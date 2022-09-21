@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>php project</title>
+</head>
+<body >
+    <div style="display: flex;justify-content:center;">
+        <div style="border: 5px solid gray; padding: 20px 60px; background: white">
+            <div style="text-align: right;"><a href="data.php"><button style="border:3px solid gray; color:white; background: gray;font-weight: bold;padding: 5px 30px;">See All Data</button></a></div>
+            <h2 style="text-align: center; color: black">Student Information</h2>
+            <form action="submit.php" onsubmit="return validateForm()" name="myForm" method="post">
+                Student Name: <input type="text" name="studentName"><br><br>
+                Address: <textarea type="text" name="address"></textarea><br><br>
+                <p>Please select gender:</p>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label><br>
+                <input type="radio" id="other" name="gender" value="Other">
+                <label for="other">Other</label><br><br>
+                Device List:<br>
+                <input type="checkbox" name="computer">Computer<br>
+                <input type="checkbox" name="mobile">Mobile<br><br>
+                <label for="department">Choose Department:</label>
+                <select name="department" id="department">
+                    <option value="cse">CSE</option>
+                    <option value="ece">ECE</option>
+                    <option value="bba">BBA</option>
+                    <option value="diploma">Diploma</option>
+                </select><br><br>
+                Password: <input type="password" name="password"><br> <br>
+                <input type="submit"> <input type="reset" value="Reset">
+        </div>
+    </div>
+    <div style="text-align:center">
+        <br>
+        <br>
+    </div>
+    <script>
+        function validateForm() {
+            let firstName = document.forms["myForm"]["firstName"].value;
+            let lastName = document.forms["myForm"]["lastName"].value;
+            let fatherName = document.forms["myForm"]["fatherName"].value;
+            let address = document.forms["myForm"]["address"].value;
+            let gender = document.forms["myForm"]["gender"].value;
+            if (firstName == "") {
+                alert("First Name must be filled out");
+                return false;
+            } else if (lastName == "") {
+                alert("Last Name must be filled out");
+                return false;
+            }
+            else if (fatherName == "") {
+                alert("Father Name must be filled out");
+                return false;
+            }
+              else if (fatherName == "") {
+                alert("Father Name must be filled out");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

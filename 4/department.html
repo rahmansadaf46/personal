@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400&family=Lobster&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .data-body {
+        display: flex;
+        justify-content: center;
+
+    }
+    #info {
+        font-family: 'Cormorant', serif;
+        font-family: 'Lobster', cursive;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    #info td,
+    #info th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+    #info tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    #info tr:hover {
+        background-color: #ddd;
+    }
+    #info th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: black;
+        color: white;
+    }
+</style>
+<body>
+    <div>
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    Institute of Science & Technology
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="department.html">Department</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </div>
+    <div class="data-body">
+        <div style="border-radius: 50px; width: 100%; margin: 20px;background-color: white;">
+            <div style=" text-align: center">
+                <a class="website " href="index.html"><span style="  font-family: 'Cormorant', serif;
+                    font-family: 'Lobster', cursive;">Home Page</span></a>
+
+            </div>
+            <div style="display: flex; justify-content: center ">
+                <div>
+                    <h2 class="lobster" style="color:orange">Departments of IST</h2>
+                    <table id="info">
+                        <tr>
+                            <td class="lobster" style="background:orange; color: white;">Sr no.</td>
+                            <td class="lobster" style="background:orange;color: white;">Department Name</td>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td>
+                                <p>CSE</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td>
+                                <p>BBA</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td>
+                                <p>ECE</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4.</td>
+                            <td>
+                                <p>Diploma</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

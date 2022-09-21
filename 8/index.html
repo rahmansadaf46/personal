@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display: flex;justify-content:center;text-align:center">
+        <div style="border: 5px solid gray; background-color:white;padding:30px">
+            <div>
+                <h3>*******************************Change Text*******************************</h3>
+                <h2 id="changeText" onClick="clickFunction()">Click on this text!</h2>
+            </div>
+            <div>
+                <h3>*******************************Change Color*******************************</h3>
+                <h2 onmouseout="style.color='black'" onMouseOver="style.color='lightGray'">Mouse over this
+                    text!
+                </h2>
+            </div>
+            <div>
+                <h3>*******************************Insert Text*******************************</h3>
+                <div style="font-weight: bold;" id="clickAppend">
+                    <button onclick="appendText()">Click</button>
+                    <h2>Hello Guys!</h2>
+                </div>
+                <div style="font-weight: bold;">
+                    <button onclick="beforeText()">Click Me</button>
+                    <h2 id="clickBefore">By by!</h2>
+                </div>
+            </div>
+            <div>
+                <h3>*******************************Remove Text*******************************</h3>
+                <button onclick="removeText()">Remove</button>
+                <h2 id="remove">See you later!</h2>
+            </div>
+        </div>
+    </div>
+    <script>
+        function clickFunction() {
+            document.getElementById('changeText').innerHTML = "Hello Buddy!!"
+        }
+        function appendText() {
+            var theDiv = document.getElementById("clickAppend");
+            var newNode = document.createElement('p');
+            newNode.innerHTML = "What's up beautiful people";
+            theDiv.appendChild(newNode);
+        }
+        function beforeText() {
+            var theDiv = document.getElementById("clickBefore");
+            var newNode = document.createElement('p');
+            newNode.innerHTML = "By by";
+            theDiv.before(newNode);
+        }
+        function removeText() {
+            var theDiv = document.getElementById("remove").innerHTML = "";
+        }
+    </script>
+</body>
+</html>

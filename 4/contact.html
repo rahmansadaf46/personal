@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400&family=Lobster&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .data-body{
+        display: flex;
+        justify-content: center;       
+    }
+</style>
+<body>
+    <div>
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+              <div class="nav-title">
+                Institute of Science & Technology
+              </div>
+            </div>         
+            <div class="nav-links">
+              <a href="department.html">Department</a>
+              <a href="contact.html" >Contact</a>
+            </div>
+          </div>
+    </div>
+    <div class="data-body">
+        <div style="border-radius: 50px; width: 100%; margin: 20px;background-color: white;">
+            <div style=" text-align: center">
+                <a class="website "  href="index.html"><span style="  font-family: 'Cormorant', serif;
+                    font-family: 'Lobster', cursive;">Home Page</span></a>               
+            </div>
+            <br>
+            <div>
+                <div class="container card message-container ">
+                    <h1 class="message-title lobster" style="color: orange">Send A Message</h1>       
+                    <form  method="post" enctype="text/plain">       
+                        <label for="message" class="message">Message</label>
+                        <textarea name="message" cols="30" rows="7" required maxlength="500"></textarea>      
+                        <label for="name" class="name">Name
+                            <p id="break">(Optional)</p>
+                        </label>
+                        <input class="first-name" type="text" name="first-name" placeholder="First Name" maxlength="20">
+                        <input class="last-name" type="text" name="last-name" placeholder="Last Name" maxlength="20">       
+                        <label for="email" class="email">Email
+                            <p id="break">(Optional)</p>
+                        </label>
+                        <input type="email" name="email" placeholder="example@email.com">
+                        <p class="button-container">
+                            <input class="button lobster" type="submit" value="Send">
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
